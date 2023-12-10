@@ -1,11 +1,9 @@
 <template>
-  <div class="app">
+  <div class="container">
     <img
       class="image-rugby"
       src="../src/assets/rugby-desktop.svg"
       alt="rugby "
-      width="auto"
-      height="auto"
     />
     <div class="tab-title">
       <div class="title">ATHLETS</div>
@@ -54,8 +52,6 @@
       class="image-basketball"
       src="../src/assets/basketball-desktop.svg"
       alt="basketball "
-      width="auto"
-      height="auto"
     />
     <div class="tab-title">
       <div class="title-part2">PLAYERS</div>
@@ -115,13 +111,22 @@ export default {
 
 
 <style scoped>
-.app {
-  /* margin: 100px 0px; */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
 .image-rugby {
   position: absolute;
   z-index: 2;
-  padding: 0px 175px;
 }
 .flex-centent1 {
   display: flex;
@@ -214,7 +219,7 @@ export default {
   height: 210px;
 }
 .tab2-part2 {
-  color: #F5F4F9;
+  color: #f5f4f9;
   height: 210px;
 }
 .tab3 {
@@ -247,7 +252,6 @@ export default {
 .image-basketball {
   position: absolute;
   z-index: 2;
-  right: 125px;
 }
 /* close tab3 */
 
@@ -285,40 +289,72 @@ export default {
   .desc {
     width: 717px;
   }
+  .image-rugby {
+    padding: 0px 175px;
+    max-width: 100%;
+    height: auto;
+  }
+  .image-basketball {
+    right: 125px;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 1919px) and (min-width: 769px) {
   /* ปรับแต่งสไตล์สำหรับขนาดหน้าจอ 768px - 1920px */
+  .container {
+    overflow-x: hidden;
+    overflow-y: auto; 
+  }
+  .image-rugby {
+    width: 518px;
+    height: 699px;
+    position: absolute;
+    z-index: 1;
+    left: -180px;
+    top: 90px;
+  }
+  .image-basketball {
+    width: 691px;
+    height: 568px;
+    z-index: 2;
+    right: -200px;
+  }
   .title {
-    padding-left: 1008px;
+    padding-left: 290px;
   }
   .tab1 {
-    padding-left: 1008px;
+    padding-left: 290px;
   }
   .tab2 {
-    padding-left: 1008px;
+    padding-left: 290px;
   }
   .tab3 {
-    padding: 60px 0px 60px 1008px;
-  }
-  .tab1-part2 {
-    padding-left: 322px;
-  }
-  .tab2-part2 {
-    padding-left: 322px;
-  }
-  .tab3-part2 {
-    padding: 60px 0px 108px 322px;
-    height: 210px;
+    padding: 30px 30px 30px 290px;
+    height: 178px;
   }
   .title-part2 {
-    padding-left: 322px;
+    padding-left: 30px;
+  }
+  .tab1-part2 {
+    margin-top: 45px;
+    padding-left: 30px;
+    height: 206px;
+  }
+  .tab2-part2 {
+    padding-left: 30px;
+    height: 179px;
+  }
+  .tab3-part2 {
+    padding: 30px 30px 30px 30px;
+    height: 151px;
   }
   .tab-title {
-    margin: 30px 0px 80px 0px;
+    margin: 21px 0px 15px 0px;
   }
   .desc {
-    width: 717px;
+    width: 447px;
   }
 }
 
